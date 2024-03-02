@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  padding: 0;
+}
+body {
+  background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+form {
+  background: #fff;
+  width: 450px;
+  padding: 30px;
+  border-radius: 6px;
+}
+form header {
+  color: #7f02a9;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+form .url-input {
+  margin: 30px 0;
+}
+.url-input .title {
+  color: #373737;
+  font-size: 18px;
+}
+.url-input .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 5px;
+  position: relative;
+}
+.url-input .field input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ccc;
+  background: #f1f1f7;
+  padding: 0 15px;
+  font-size: 15px;
+}
+.url-input .field .bottom-line {
+  height: 2px;
+  width: 100%;
+  background-color: #7f02a9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+.url-input .field input:focus ~ .bottom-line,
+.url-input .field input:valid ~ .bottom-line {
+  transform: scale(1);
+}
+form .preview-area {
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 6px;
+  border: 2px dashed #7f02a9;
+  overflow: hidden;
+}
+.preview-area.active {
+  border: none;
+}
+.preview-area .icon {
+  color: #550172;
+  font-size: 75px;
+}
+.preview-area span {
+  color: #550172;
+  margin-top: 25px;
+}
+.preview-area.active .icon,
+.preview-area.active span {
+  display: none;
+}
+.preview-area .thumbnail {
+  width: 100%;
+  border-radius: 6px;
+  display: none;
+}
+.preview-area.active .thumbnail {
+  display: block;
+}
+form .download-btn {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: #7f02a9;
+  border-radius: 4px;
+  color: #fff;
+  margin: 30px 0 20px 0;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
